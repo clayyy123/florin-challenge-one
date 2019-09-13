@@ -1,45 +1,61 @@
+$primary-font: 'Anton', sans-serif;
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
   font-size: 62.5%;
-  font-family: "Anton", sans-serif; }
+  font-family: $primary-font;
+}
 
 .container {
-  display: flex; }
+  display: flex;
+}
 
 .input-container {
   display: flex;
   flex-direction: column;
-  width: 80%; }
-  .input-container__input {
+  width: 80%;
+
+  &__input {
     width: 100%;
     border: none;
     padding: 2rem 1.5rem;
-    background-color: #eeeeee;
+    background-color: rgb(238, 238, 238);
     margin-bottom: 2rem;
-    font-size: 1.5rem; }
-    .input-container__input::placeholder {
+    font-size: 1.5rem;
+
+    &::placeholder {
       font-display: 'Roboto', sans-serif;
-      font-size: 1.5rem; }
-    .input-container__input:focus {
-      outline: none; }
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
 
 .sign-in {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .sign-in__title {
+  align-items: center;
+  // justify-content: center;
+
+  &__title {
     font-size: 7rem;
-    letter-spacing: 0.5rem; }
-  .sign-in__icons {
-    display: flex; }
-  .sign-in__icon {
+    letter-spacing: 0.5rem;
+  }
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
     border: 0.1rem solid black;
     height: 5rem;
     width: 5rem;
@@ -47,18 +63,22 @@ html {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; }
-  .sign-in button {
+    align-items: center;
+  }
+
+  button {
     border: none;
-    background-color: #fe4a38;
+    background-color: rgb(254, 74, 56);
     padding: 1.5rem 4rem;
     border-radius: 50rem;
-    color: white; }
+    color: white;
+  }
+}
 
 .sign-up {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-
-/*# sourceMappingURL=style.css.map */
+  // justify-content: center;
+  align-items: center;
+}
