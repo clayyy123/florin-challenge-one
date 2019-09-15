@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .overlay {
+        /* background: linear-gradient(90deg, white 0%, blue 100%); */
+        height: 100vh;
+        display: flex;
+      }
+      .left {
+        background: linear-gradient(90deg, white 0%, rgb(128, 139, 255) 100%);
+        flex: 0 0 50%;
+        text-align: center;
+      }
+
+      .right {
+        background: linear-gradient(90deg, rgb(128, 139, 255) 0%, blue 100%);
+        flex: 1;
+        text-align: center;
+        position: relative;
+        transition: 2s all;
+      }
+
+      .right-active {
+        transform: translateX(100%);
+      }
+
+      .right h1 {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="left"><h1>LEFT</h1></div>
+      <div class="right"><h1>RIGHT</h1></div>
+    </div>
+  </body>
+</html>
