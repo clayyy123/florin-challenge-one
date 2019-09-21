@@ -61,6 +61,14 @@ html {
   // position: relative;
   background-color: white;
   z-index: 20;
+  transition: all 1s ease-out;
+  z-index: 10;
+
+  &-active {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -10;
+  }
 }
 
 .sign-in {
@@ -103,7 +111,15 @@ html {
 
 .sign-up-container {
   flex: 1;
-  // position: relative;
+  position: relative;
+  transition: all 1s ease-out;
+  z-index: 10;
+
+  &-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -10;
+  }
 }
 
 .sign-up {

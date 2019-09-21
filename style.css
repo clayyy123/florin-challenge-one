@@ -43,7 +43,13 @@ html {
   flex: 0 0 50%;
   height: 100%;
   background-color: white;
-  z-index: 20; }
+  z-index: 20;
+  transition: all 1s ease-out;
+  z-index: 10; }
+  .sign-in-container-active {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -10; }
 
 .sign-in {
   display: flex;
@@ -75,7 +81,14 @@ html {
     margin: 0 1rem; }
 
 .sign-up-container {
-  flex: 1; }
+  flex: 1;
+  position: relative;
+  transition: all 1s ease-out;
+  z-index: 10; }
+  .sign-up-container-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -10; }
 
 .sign-up {
   display: flex;
