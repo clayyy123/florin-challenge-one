@@ -42,7 +42,6 @@ html {
 .sign-in-container {
   flex: 0 0 50%;
   height: 100%;
-  position: relative;
   background-color: white;
   z-index: 20; }
 
@@ -76,18 +75,14 @@ html {
     margin: 0 1rem; }
 
 .sign-up-container {
-  flex: 1;
-  position: relative; }
+  flex: 1; }
 
 .sign-up {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  right: 100%;
-  transition: 1s;
-  position: relative; }
+  height: 100%; }
   .sign-up__title {
     font-size: 5rem;
     letter-spacing: 0.5rem;
@@ -96,15 +91,24 @@ html {
     margin-bottom: 1rem; }
 
 .overlay-container {
-  background: linear-gradient(90deg, #fe4a38 0%, #fd416a 100%);
-  background-repeat: no-repeat;
   position: absolute;
   width: 50%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+  z-index: 30; }
+  .overlay-container-active {
+    transform: translate(100%); }
+
+.overlay {
+  background: linear-gradient(90deg, #fe4a38 0%, #fd416a 100%);
   display: flex;
   height: 100%;
-  z-index: 30;
-  right: 0;
-  overflow: hidden; }
+  width: 200%;
+  transition: transform 1s ease-in-out;
+  position: relative; }
+  .overlay-active {
+    transform: translate(-50%); }
 
 .sign-up-overlay {
   flex: 1;
@@ -114,10 +118,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0;
-  color: white;
-  position: absolute;
-  right: 0; }
+  color: white; }
   .sign-up-overlay__title {
     font-size: 5rem;
     letter-spacing: 0.5rem;
@@ -138,10 +139,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0;
-  color: white;
-  left: -100%;
-  position: absolute; }
+  color: white; }
   .sign-in-overlay__title {
     font-size: 5rem;
     letter-spacing: 0.5rem;
