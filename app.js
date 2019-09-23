@@ -11,12 +11,13 @@ signInBtn.addEventListener('click', () => {
   overlay.classList.add('overlay-active');
   overlayCon.classList.add('overlay-container-active');
   signUpCont.classList.add('sign-up-container-active');
-  signInCont.classList.remove('sign-in-container-active');
+  signInCont.classList.add('sign-in-container-active');
+  signIn.classList.add('sign-in-active');
 });
 
 signUpBtn.addEventListener('click', () => {
   overlay.classList.remove('overlay-active');
   overlayCon.classList.remove('overlay-container-active');
   signUpCont.classList.remove('sign-up-container-active');
-  signInCont.classList.add('sign-in-container-active');
+  signInCont.classList.remove('sign-in-container-active');
 });
